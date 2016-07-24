@@ -1,6 +1,6 @@
 Wake up, discover that you are the Eyes of the World.
 
-There heart has its beaches its homelands and thoughts of its own.
+The heart has its beaches its homelands and thoughts of its own.
 
 Wake now to find out that you are the song that the morning brings,
 but the heart has its seasons its evenins and songs of its own.
