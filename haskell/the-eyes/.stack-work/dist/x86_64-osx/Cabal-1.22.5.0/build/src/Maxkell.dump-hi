@@ -1,0 +1,180 @@
+
+==================== FINAL INTERFACE ====================
+2016-09-06 03:03:57.536494 UTC
+
+interface theey_4u3OZkVM9b40frwdrOrzfq:Maxkell 7103
+  interface hash: e3687fe8530ae126d6557e0eaa4329bd
+  ABI hash: 953d1b585eed8c0ee346f7b3f14f6567
+  export-list hash: 0113654cc683e0a022849f03bf66ff5b
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 4c0a7b65a6dddbc4161c2e2bfabe3dc3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Maxkell.plainHandler
+  Maxkell.serveLog
+  Maxkell.HandlerFunc
+module dependencies:
+package dependencies: base-4.8.2.0 ghc-prim-0.4.0.0
+                      integer-gmp-1.0.0.0 network-2.6.3.1@netwo_4FL8hbDqfKm3Q9HV1QK1xw
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         network-2.6.3.1@netwo_4FL8hbDqfKm3Q9HV1QK1xw:Network.Socket
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Monoid
+                         base-4.8.2.0:Data.Type.Equality base-4.8.2.0:GHC.Generics
+import  -/  base-4.8.2.0:Data.Bits 87551525e7ef366d0fc4cad44e8b1bfc
+import  -/  base-4.8.2.0:Data.List 3f0782c8d4bf50eecefcd5ea1798aac8
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:GHC.Show 0e1d8380a8fb0cfb07ebeda3b70cbf38
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:System.IO 0899686bfc1d9ef72dff3de85e99862a
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  network-2.6.3.1@netwo_4FL8hbDqfKm3Q9HV1QK1xw:Network.BSD 1f9de5e3e4b851bea515ec4fe0f0c832
+import  -/  network-2.6.3.1@netwo_4FL8hbDqfKm3Q9HV1QK1xw:Network.Socket b16c8729f14e9c78fbcb8b20eefe78fe
+import  -/  network-2.6.3.1@netwo_4FL8hbDqfKm3Q9HV1QK1xw:Network.Socket.Internal f1aaf48b051b2b4c7739463cc397a18f
+import  -/  network-2.6.3.1@netwo_4FL8hbDqfKm3Q9HV1QK1xw:Network.Socket.Types 81a55fa10b34c648aabfa0ed7f0744d9
+7fff055eb31b98c6a1b7ebfed718af00
+  type HandlerFunc =
+    Network.Socket.Types.SockAddr -> GHC.Base.String -> GHC.Types.IO ()
+f09725e6674e30e005b91ae6b7a54d47
+  plainHandler :: Maxkell.HandlerFunc
+  {- Arity: 3, Strictness: <L,1*U><L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Maxkell.plainHandler1
+                  `cast`
+                (<Network.Socket.Types.SockAddr>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+f4aa5d8c7d7f69d5af72f33272ba1c16
+  plainHandler1 ::
+    Network.Socket.Types.SockAddr
+    -> GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,1*U><L,U><L,U>,
+     Unfolding: (\ addr :: Network.Socket.Types.SockAddr
+                   msg :: GHC.Base.String
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   (GHC.CString.unpackAppendCString#
+                      "From "#
+                      (GHC.Base.++
+                         @ GHC.Types.Char
+                         (Network.Socket.$w$cshowsPrec3
+                            addr
+                            (GHC.Types.[] @ GHC.Types.Char))
+                         (GHC.CString.unpackAppendCString# ": "# msg)))
+                   GHC.Types.True
+                   eta) -}
+f187ac755345ed68075f8aef6451eb50
+  serveLog ::
+    GHC.Base.String -> Maxkell.HandlerFunc -> GHC.Types.IO ()
+  {- Arity: 3, Strictness: <L,U><L,C(C1(C1(U(U,A))))><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Maxkell.serveLog1
+                  `cast`
+                (<GHC.Base.String>_R
+                 ->_R <Maxkell.HandlerFunc>_R
+                 ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+51612010ebeacc61ab8050679b8dbdb9
+  serveLog1 ::
+    GHC.Base.String
+    -> Maxkell.HandlerFunc
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <L,U><L,C(C1(C1(U(U,A))))><L,U>,
+     Unfolding: (\ port :: GHC.Base.String
+                   handlerfunc :: Maxkell.HandlerFunc
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case Network.Socket.getAddrInfo1
+                        Maxkell.serveLog2
+                        (GHC.Base.Nothing @ Network.Socket.HostName)
+                        (GHC.Base.Just @ Network.Socket.ServiceName port)
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild {
+                   []
+                   -> case GHC.List.badHead
+                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                      of {}
+                   : x ds2
+                   -> case x of ww { Network.Socket.AddrInfo ww1 ww2 ww3 ww4 ww5 ww6 ->
+                      case Network.Socket.$wa20
+                             ww2
+                             Network.Socket.Types.Datagram
+                             0
+                             ipv of ds3 { (#,#) ipv2 ipv3 ->
+                      case ipv3 of ww7 { Network.Socket.Types.MkSocket ww8 ww9 ww10 ww11 ww12 ->
+                      case Network.Socket.$wa3
+                             ww8
+                             ww12
+                             ww5
+                             ipv2 of ds4 { (#,#) ipv4 ipv5 ->
+                      letrec {
+                        a :: forall b.
+                             Network.Socket.Types.Socket
+                             -> [GHC.Types.Char]
+                             -> GHC.Prim.State# GHC.Prim.RealWorld
+                             -> (# GHC.Prim.State# GHC.Prim.RealWorld, b #)
+                          {- Arity: 3, Strictness: <L,U(U(U),U,A,A,U(U))><L,1*U><L,U> -}
+                        = \ @ b
+                            sock :: Network.Socket.Types.Socket
+                            str :: [GHC.Types.Char]
+                            eta1 :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                          case Network.Socket.$wa14
+                                 sock
+                                 1024
+                                 eta1 of ds5 { (#,#) ipv6 ipv7 ->
+                          case ipv7 of wild1 { (,,) msg ds addr ->
+                          case (handlerfunc addr msg) `cast` (GHC.Types.NTCo:IO[0] <()>_R)
+                                 ipv6 of ds6 { (#,#) ipv8 ipv9 ->
+                          let {
+                            str' :: [GHC.Types.Char]
+                            = GHC.Base.++
+                                @ GHC.Types.Char
+                                str
+                                (GHC.CString.unpackAppendCString# " "# msg)
+                          } in
+                          case GHC.IO.Handle.Text.hPutStr2
+                                 GHC.IO.Handle.FD.stdout
+                                 str'
+                                 GHC.Types.True
+                                 ipv8 of ds7 { (#,#) ipv10 ipv11 ->
+                          a @ b sock str' ipv10 } } } }
+                      } in
+                      a @ () ww7 (GHC.Types.[] @ GHC.Types.Char) ipv4 } } } } } }) -}
+227d72ecf9f7280121fe5d873d118b02
+  serveLog2 :: GHC.Base.Maybe Network.Socket.AddrInfo
+  {- Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ Network.Socket.AddrInfo
+                   Maxkell.serveLog3) -}
+e147529b20863cc57fc7e94f93c625da
+  serveLog3 :: Network.Socket.AddrInfo
+  {- Strictness: m,
+     Unfolding: (Network.Socket.AddrInfo
+                   Maxkell.serveLog4
+                   Network.Socket.Types.AF_UNSPEC
+                   Network.Socket.Types.NoSocketType
+                   Network.Socket.defaultHints1
+                     `cast`
+                   (Sym (Foreign.C.Types.NTCo:CInt[0]))
+                   (GHC.Err.undefined @ Network.Socket.Types.SockAddr)
+                   (GHC.Err.undefined @ (GHC.Base.Maybe GHC.Base.String))) -}
+6e65790c5f43a2f24bb19ef0c04a7f8c
+  serveLog4 :: [Network.Socket.AddrInfoFlag]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Network.Socket.AddrInfoFlag
+                   Network.Socket.AI_PASSIVE
+                   (GHC.Types.[] @ Network.Socket.AddrInfoFlag)) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
